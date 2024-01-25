@@ -1,0 +1,17 @@
+
+name: Ejemplo de acción javascript
+description: 'Acción de tirada de dados'
+inputs:
+  numero-dados:
+    required: true
+    type: string
+    default: dos
+    description: "El número de dados que se van a tirar. Valores aceptados: [uno, dos]"
+outputs:
+  dado1:
+    value: ${{ steps.dado1.outputs.dado1 }}
+  dado2: 
+    value: ${{ steps.dado1.outputs.dado2 }}
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
