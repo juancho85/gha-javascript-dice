@@ -9,9 +9,9 @@ inputs:
     description: "El número de dados que se van a tirar. Valores aceptados: [uno, dos]"
 outputs:
   dado1:
-    value: ${{ steps.dado1.outputs.dado1 }}
+    description: 'resultado de la tirada del primer dado'
   dado2: 
-    value: ${{ steps.dado1.outputs.dado2 }}
+    description: 'resultado de la tirada del segundo dado'
 runs:
   using: 'node20'
   main: 'dist/index.js'
